@@ -1,0 +1,10 @@
+mixin list(title, items)
+    h2.list-label= title
+    ul.list-ul
+        each item in items
+            - var price = item.price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+            li.list-li
+                img(src=item.photo, alt=item.name class="list-photo")
+                p.list-item-name #{item.name}
+                p.list-item-price= price

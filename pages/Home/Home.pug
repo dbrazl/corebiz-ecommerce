@@ -1,0 +1,89 @@
+-
+    var highlights = [
+        {
+            id: 1,
+            name: "Camisa Armani Palho",
+            photo: "../../assets/images/camisa1.webp",
+            price: 65.0,
+        },
+        {
+            id: 2,
+            name: "Sapatênis Overl Marrom",
+            photo: "../../assets/images/tenis1.webp",
+            price: 100.0,
+        },
+        {
+            id: 3,
+            name: "Bermuda Armada Green",
+            photo: "../../assets/images/bermuda1.webp",
+            price: 65.0,
+        },
+        {
+            id: 4,
+            name: "Óculos de Sol Rift",
+            photo: "../../assets/images/oculos.webp",
+            price: 80.0,
+        },
+        {
+            id: 5,
+            name: "Bolsa Lunnes Black",
+            photo: "../../assets/images/bolsa.webp",
+            price: 150.0,
+        },
+    ];
+
+    var essencials = [
+        {
+            id: 1,
+            name: "Camisa Louvi Basic White",
+            photo: "../../assets/images/camisa2.webp",
+            price: 75.0,
+        },
+        {
+            id: 2,
+            name: "Camiseta Arnel Moon",
+            photo: "../../assets/images/camisa3.webp",
+            price: 85.0,
+        },
+        {
+            id: 3,
+            name: "Camiseta Arnel Tropical",
+            photo: "../../assets/images/camisa4.webp",
+            price: 85.0,
+        },
+        {
+            id: 4,
+            name: "Camiseta NewHat Basic Black",
+            photo: "../../assets/images/camisa5.webp",
+            price: 70.0,
+        },
+        {
+            id: 5,
+            name: "Camiseta Orlyens Grey",
+            photo: "../../assets/images/camisa6.webp",
+            price: 75.0,
+        },
+    ];
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Corebiz e-commerce
+    body    
+        div.container
+            include components/Header.pug
+            main
+                section(name="navigation" class="navigation")
+                    .column_left
+                        include components/Offer.pug
+                    .column_right
+                        include components/Nav.pug
+                section(name="highlights")
+                    include components/List.pug
+                    +list("Popular", highlights)
+                section(name="essencials")
+                    +list("Essenciais", essencials)
+    script(src="script.js")

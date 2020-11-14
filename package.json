@@ -1,0 +1,17 @@
+{
+  "name": "pug_js_tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon main.js -e js,pug,scss --watch ./pages --watch ./scss",
+    "build": "node main.js"
+  },
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
